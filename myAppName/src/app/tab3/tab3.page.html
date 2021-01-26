@@ -1,10 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/tab1" icon="arrow-undo-outline" text="">
-        <!-- <ion-icon name=></ion-icon> -->
-      </ion-back-button>
-    </ion-buttons>
-    <ion-title>支付</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>Picker</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen class="ion-padding">
+<!--     
+    <ion-button expand="block" onclick="pickerFn(1,roleOptions[0].length,roleOptions,'role')"><em>{{roleText}}<i></i></em></ion-button>
+    <ion-button expand="block" onclick="openPicker(2, 5, multiColumnOptions)">Show Multi Column Picker</ion-button> -->
+    <ul>
+      <li (click)="pickerFn(1,roleOptions[0].length,roleOptions,'role')"><em>{{roleText}}<i></i></em></li>
+      <li (click)="pickerFn(1,subjectOptions[0].length,subjectOptions,'subject')"><em>{{subjectText}}<i></i></em></li>
+    </ul>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="backButton">
+      <ion-back-button defaultHref="/tabs/tab1" icon="chevron-back-sharp" text="">
+        <!-- <ion-icon name=></ion-icon> -->
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>添加收款人</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item-divider>
+      <ion-label>收款人信息</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>电话号码：</ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    
+    <ion-item-divider>
+      <ion-label>收款人银行卡信息</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>开户网点：</ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>银行类型：</ion-label>
+      <ion-select [(ngModel)]='payee.bankName' interface="popover">
+        <ion-select-option *ngFor="let item of payee.bankNameList" [value]="item">{{item}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>开户地点：</ion-label>
+      <ion-select [(ngModel)]='payee.city' interface="popover">
+        <ion-select-option *ngFor="let item of payee.cityName" [value]="item">{{item}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

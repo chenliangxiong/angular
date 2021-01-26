@@ -10,6 +10,14 @@ const routes: Routes = [
     path: 'pay',
     loadChildren: () => import('./pay/pay.module').then( m => m.PayPageModule)
   },
+  {
+    path: 'add-payee',
+    loadChildren: () => import('./add-payee/add-payee.module').then( m => m.AddPayeePageModule)
+  },
+  {
+    path: 'edit-payee',
+    loadChildren: () => import('./edit-payee/edit-payee.module').then( m => m.EditPayeePageModule)
+  },
 ];
 @NgModule({
   imports: [
