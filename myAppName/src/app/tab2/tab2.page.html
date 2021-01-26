@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" icon="arrow-undo-outline" text="">
+        <!-- <ion-icon name=></ion-icon> -->
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>付款</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="input">
+    <ion-item>
+      <ion-label>￥</ion-label>
+      <ion-input placeholder="请输入转账数额" type="number"></ion-input>
+    </ion-item>
+  </div>
+  
+  <ion-list>
+    <ion-item>
+      <ion-icon name="logo-alipay"></ion-icon>
+      &nbsp;
+      <ion-button [routerLink]="['/tabs/tab3']" fill="clear">支付宝支付</ion-button>
+      <ion-radio slot="end" value="1"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="logo-wechat"></ion-icon>
+      &nbsp;
+      <ion-button [routerLink]="['/tabs/tab3']" fill="clear">微信支付</ion-button>
+      <ion-radio slot="end" value="1"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>
