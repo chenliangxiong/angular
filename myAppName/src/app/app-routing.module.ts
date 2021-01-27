@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'pay',
-    loadChildren: () => import('./pay/pay.module').then( m => m.PayPageModule)
-  },
-  {
     path: 'add-payee',
     loadChildren: () => import('./add-payee/add-payee.module').then( m => m.AddPayeePageModule)
   },
@@ -18,6 +14,18 @@ const routes: Routes = [
     path: 'edit-payee',
     loadChildren: () => import('./edit-payee/edit-payee.module').then( m => m.EditPayeePageModule)
   },
+  {
+    path: 'transfer',
+    loadChildren: () => import('./transfer/transfer.module').then( m => m.TransferPageModule)
+  },
+  {
+    path: 'tab4',
+    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+  },
+  {
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+  }
 ];
 @NgModule({
   imports: [

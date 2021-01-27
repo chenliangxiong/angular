@@ -1,3 +1,4 @@
+import { ToastController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPayeePage implements OnInit {
 
-  constructor() { }
+  constructor(public toastController: ToastController) {}
+
 
   public payee:any={
     payeeName:'',
@@ -24,4 +26,14 @@ export class AddPayeePage implements OnInit {
   ngOnInit() {
   }
 
+
+  
+  async onClick() {
+    // if()
+    const toast = await this.toastController.create({
+      message: 'Your settings have been saved.',
+      duration: 2000
+    });
+    toast.present();
+  }
 }

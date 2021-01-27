@@ -1,17 +1,190 @@
-<ion-app>
-  <ion-header translucent>
-    <ion-toolbar>
-      <ion-title>Picker</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header [translucent]="true">
+  <ion-button fill="clear" [routerLink]="['/tabs/tab3']" style="float: left;">
+    <p style="color:#000; ">登录</p>
+    <!-- <ion-searchbar inputmode="numeric"></ion-searchbar> -->
+  </ion-button>
+  <div style="width: 70%; float: left;">
 
-  <ion-content fullscreen class="ion-padding">
-<!--     
-    <ion-button expand="block" onclick="pickerFn(1,roleOptions[0].length,roleOptions,'role')"><em>{{roleText}}<i></i></em></ion-button>
-    <ion-button expand="block" onclick="openPicker(2, 5, multiColumnOptions)">Show Multi Column Picker</ion-button> -->
-    <ul>
-      <li (click)="pickerFn(1,roleOptions[0].length,roleOptions,'role')"><em>{{roleText}}<i></i></em></li>
-      <li (click)="pickerFn(1,subjectOptions[0].length,subjectOptions,'subject')"><em>{{subjectText}}<i></i></em></li>
-    </ul>
-  </ion-content>
-</ion-app>
+    <ion-searchbar placeholder="请输入内容" ></ion-searchbar>
+  </div>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="oneList">
+      <ion-col class="twoList">
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="bookmarks-outline" class="threeList"></ion-icon>
+        </ion-button>
+        <p class="fourList">理财</p>
+      </ion-col>
+      <ion-col class="twoList">
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="bookmarks-outline" class="threeList"></ion-icon>
+        </ion-button>
+        <p class="fourList">理财</p>
+      </ion-col>
+      <ion-col class="twoList">
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="bookmarks-outline" class="threeList"></ion-icon>
+        </ion-button>
+        <p class="fourList">理财</p>
+      </ion-col>
+      <ion-col class="twoList">
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="bookmarks-outline" class="threeList"></ion-icon>
+        </ion-button>
+        <p class="fourList">理财</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+<br>
+<br>
+<img src="\assets\images\4.png" alt="">
+<ion-item button [routerLink]="['/my-management-list']" lines="full">
+  <ion-label>
+    <!-- <ion-icon slot="start" name="person-circle-sharp" style="font-size: 24px;line-height: 24px;"></ion-icon> -->
+    我的投资
+  </ion-label>
+</ion-item>
+<ion-item lines="full">
+  <div>
+      <div class="managementNuber" [routerLink]="['/management-message']">
+        <h1>3.6%</h1>
+        <p>上期年化</p>
+      </div>
+      <div  class="managementList" [routerLink]="['/management-message']">
+          <h3>日益月鑫90天</h3>
+          <p>招行明星产品 5万起购 到期资金自动到账</p>
+      </div>
+  </div>
+</ion-item>
+<ion-item lines="full">
+  <div>
+      <div class="managementNuber" [routerLink]="['/management-message']">
+        <h1>3.6%</h1>
+        <p>上期年化</p>
+      </div>
+      <div  class="managementList" [routerLink]="['/management-message']">
+          <h3>日益月鑫90天</h3>
+          <p>招行明星产品 5万起购 到期资金自动到账</p>
+      </div>
+  </div>
+</ion-item>
+
+
+<ion-item button [routerLink]="['/management-list']" lines="full">
+  <ion-label>
+    短期投资
+  </ion-label>
+</ion-item>
+<ion-item lines="full">
+  <div>
+      <div class="managementNuber" [routerLink]="['/management-message']">
+        <h1>3.6%</h1>
+        <p>上期年化</p>
+      </div>
+      <div  class="managementList" [routerLink]="['/management-message']">
+          <h3>日益月鑫90天</h3>
+          <p>招行明星产品 5万起购 到期资金自动到账</p>
+      </div>
+  </div>
+</ion-item>
+<ion-item lines="full">
+  <div>
+      <div class="managementNuber" [routerLink]="['/management-message']">
+        <h1>3.6%</h1>
+        <p>上期年化</p>
+      </div>
+      <div  class="managementList" [routerLink]="['/management-message']">
+          <h3>日益月鑫90天</h3>
+          <p>招行明星产品 5万起购 到期资金自动到账</p>
+      </div>
+  </div>
+</ion-item>
+
+<ion-item button [routerLink]="['/management-list']" lines="full">
+  <ion-label>
+    长期投资
+  </ion-label>
+</ion-item>
+<ion-item lines="full"   >
+  <div>
+      <div class="managementNuber" [routerLink]="['/management-message']">
+        <h1>3.6%</h1>
+        <p>上期年化</p>
+      </div>
+      <div  class="managementList" [routerLink]="['/management-message']">
+          <h3>日益月鑫90天</h3>
+          <p>招行明星产品 5万起购 到期资金自动到账</p>
+      </div>
+  </div>
+</ion-item>
+<ion-item lines="full">
+  <div>
+      <div class="managementNuber" [routerLink]="['/management-message']">
+        <h1>3.6%</h1>
+        <p>上期年化</p>
+      </div>
+      <div  class="managementList" [routerLink]="['/management-message']">
+          <h3>日益月鑫90天</h3>
+          <p>招行明星产品 5万起购 到期资金自动到账</p>
+      </div>
+  </div>
+</ion-item>
+
+
+<br>
+
+<!-- <ion-item button [routerLink]="['/management-list']" lines="full">
+  <ion-label>
+    理财干货
+  </ion-label>
+</ion-item>
+<br> -->
+
+<ion-card>
+  <ion-card-header style="text-align:center">
+    <img src="\assets\images\1.jpg" alt="" >
+    <ion-card-title>Card Title</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Keep close to Nature's heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-header style="text-align:center">
+    <img src="\assets\images\2.jpg" alt="" >
+    <ion-card-title>Card Title</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Keep close to Nature's heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-header style="text-align:center">
+    <img src="\assets\images\3.jpg" alt="" >
+    <ion-card-title>Card Title</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Keep close to Nature's heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+  </ion-card-content>
+</ion-card>
+
+
+
+
+
+
+
+
+
+</ion-content>

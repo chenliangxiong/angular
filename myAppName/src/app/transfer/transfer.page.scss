@@ -1,0 +1,59 @@
+*{padding:0;margin:0;}
+
+//header
+.headerButton1{
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+
+.titleDiv{
+    width: 80%;height: 100%; float: left;
+}
+
+.titleP{
+    text-align: center;margin-top: 5px; font-weight: 900;
+}
+
+.headerButton2{
+width: 10%;height: 100%; float: left;
+}
+
+//content
+
+.row {
+    margin-top: 40px;
+    align-content: center;   
+    height: 60px;
+}
+
+.col {
+    height: 60px;
+    text-align: center;
+}
+
+.img{
+    width: 20%;
+    font-size: 40px;
+}
+
+.label{
+    margin-top: 0;
+    text-align: center;
+}
+
+//card
+
+.cardRow {
+    align-content: center;
+}
+
+.cardCol {
+    height: 60px;
+    text-align: center;
+}
+
+.cardLabel{
+    margin-top: 0;
+    text-align: center;
+}
