@@ -1,6 +1,6 @@
 import { ToastController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ElementRef} from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
 
 @Component({
@@ -10,9 +10,14 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class CardTransferPage implements OnInit {
 
-  constructor(public toastController: ToastController,public alertController: AlertController,public actionSheetController:ActionSheetController) {}
+  constructor(public toastController: ToastController,
+    public alertController: AlertController,
+    public actionSheetController:ActionSheetController,
+    public elementRef:ElementRef) {}
 
-  public displagButton:any="display:hidden";
+  public countInput = 0;
+  public number:any = ['','','','','',''];
+  public display = false;
   public payee:any={
     payeeName:'',
     payeePhone:'',
@@ -25,7 +30,102 @@ export class CardTransferPage implements OnInit {
     nickName:''
   }
 
+
   ngOnInit() {
+  }
+
+  public closePay(){
+    this.display = false;
+  }
+
+  public changefocus(){
+    if(this.countInput<0){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw1').focus();
+      }, 0);
+      this.countInput=0;
+      console.log(this.countInput);
+      return;
+    }if(this.countInput==0){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw1').focus();
+      }, 0);
+    }
+    this.countInput++;
+    if(this.countInput==1){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw2').focus();
+      }, 0);
+    }else if(this.countInput==2){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw3').focus();
+      }, 0);
+    }else if(this.countInput==3){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw4').focus();
+      }, 0);
+    }else if(this.countInput==4){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw5').focus();
+      }, 0);
+    }else if(this.countInput==5){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw6').focus();
+      }, 0);
+    }else if(this.countInput>=6){
+      setTimeout(() => {
+        this.elementRef.nativeElement.querySelector('.pw6').focus();
+      }, 0);
+      this.countInput=6;
+      console.log(this.countInput);
+      return;
+    }
+  }
+
+  public inputNum1(){
+    this.number[this.countInput]='1';
+    this.changefocus();
+  }
+  public inputNum2(){
+    this.number[this.countInput]='2';
+    this.changefocus();
+  }
+  public inputNum3(){
+    this.number[this.countInput]='3';
+    this.changefocus();
+  }
+  public inputNum4(){
+    this.number[this.countInput]='4';
+    this.changefocus();
+  }
+  public inputNum5(){
+    this.number[this.countInput]='5';
+    this.changefocus();
+  }
+  public inputNum6(){
+    this.number[this.countInput]='6';
+    this.changefocus();
+  }
+  public inputNum7(){
+    this.number[this.countInput]='7';
+    this.changefocus();
+  }
+  public inputNum8(){
+    this.number[this.countInput]='8';
+    this.changefocus();
+  }
+  public inputNum9(){
+    this.number[this.countInput]='9';
+    this.changefocus();
+  }
+  public inputNum0(){
+    this.number[this.countInput]='0';
+    this.changefocus();
+  }
+  public backspace(){
+    this.number[this.countInput-1]='';
+    this.countInput-=2;
+    this.changefocus();
   }
 
   async onClick() {
@@ -44,12 +144,16 @@ export class CardTransferPage implements OnInit {
           cssClass: 'secondary',
           text: '确认',
           handler: () => {
-            this.presentActionSheet();
+            this.display = true;
           }
         }
       ]
     });
     await alert.present();
+  }
+
+  public close(){
+    this.display = false;
   }
 
   async presentActionSheet() {

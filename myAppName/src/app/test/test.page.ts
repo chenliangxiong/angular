@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ElementRef} from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 
@@ -9,11 +9,34 @@ import { ToastController } from '@ionic/angular';
 })
 export class TestPage implements OnInit {
 
-  constructor(public toastController: ToastController,public alertController: AlertController) {}
+  public input:any='';
+
+  public flage = 0;
+
+  constructor(public toastController: ToastController,
+    public alertController: AlertController,
+    public elementRef:ElementRef) {}
 
   ngOnInit() {
   }
 
+  onClick2(){
+    
+    this.flage++;
+    console.log(this.flage);
+  }
+
+  onClick(){
+    this.flage++;
+    console.log(this.flage);
+  }
+  
+
+  focusOn(){
+    setTimeout(() => {
+      this.elementRef.nativeElement.querySelector('.input-left').focus();
+    }, 300);
+  }
 
   //alert
 
