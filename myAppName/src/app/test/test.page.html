@@ -1,19 +1,16 @@
 <ion-header>
   <ion-toolbar>
-
     <ion-buttons slot="start" class="backButton">
-      <ion-back-button defaultHref="/tabs/tab4" icon="chevron-back-sharp" text="">
-      <!-- <ion-icon name=></ion-icon> -->
-      </ion-back-button>
-    </ion-buttons>
-    <ion-title class="header">test</ion-title>
-    <ion-toolbar>
-      <ion-buttons slot="end" class="backButton">
-        <ion-back-button defaultHref="/tabs/tab4" icon="chevron-back-sharp" text="">
+      <ion-back-button defaultHref="/transfer" icon="chevron-back-sharp" text="">
         <!-- <ion-icon name=></ion-icon> -->
       </ion-back-button>
     </ion-buttons>
+    <ion-title>银行卡转账</ion-title>
+    <ion-button fill="clear" slot="end" [routerLink]="['/add-payee']">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
+</ion-header>
 
 <ion-content>
   <ion-button (click)="presentToast()">
@@ -22,24 +19,20 @@
   <ion-button (click)="presentToastWithOptions()">
     Toast2
   </ion-button>
+
   <ion-button (click)="presentAlertMultipleButtons()">
     alert
   </ion-button>
-
   <ion-button (click)="presentAlertConfirm()">
     alert2
   </ion-button>
-
   <ion-button (click)="presentAlertPrompt()">
     alert3
   </ion-button>
-
   <ion-button (click)="presentAlertRadio()">
     alert4
   </ion-button>
-
   <ion-button (click)="presentAlertCheckbox()">
     alert5
   </ion-button>
-
 </ion-content>

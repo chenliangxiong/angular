@@ -16,38 +16,64 @@
       </ion-back-button>
     </ion-buttons>
   </div>
+  
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-row class="row">
-
     <ion-col class="col">
-      <div>
-        <img src="../assets/images/转账1.png" class="img">
+      <div class="contentDiv1" [routerLink]="['/card-transfer']">
+        <div class="imgDiv">
+          <img src="../assets/images/转账1.png" class="img">
+        </div>
+        <div class="labelDiv">
+          <ion-label class="label">银行卡转账</ion-label>
+        </div>
       </div>
-      <ion-label class="label">Label</ion-label>
     </ion-col>
     <ion-col class="col">
-      <div>
-        <img src="../assets/images/转账1.png" class="img">
+      <div class="contentDiv2" [routerLink]="['/tabs/tab3']">
+        <div class="imgDiv">
+          <img src="../assets/images/转账1.png" class="img">
+        </div>
+        <div class="labelDiv">
+          <ion-label class="label">预约转账</ion-label>
+        </div>
       </div>
-      <ion-label class="label">Label</ion-label>
     </ion-col>
   </ion-row>
 
-  <ion-card>
+  <ion-card class="card">
     <ion-row class="cardRow">
       <ion-col class="cardCol">
-        <div>
-          <img src="../assets/images/转账1.png" class="img">
+        <div class="cardDiv1" [routerLink]="['/tabs/tab3']">
+          <div class="imgDiv2">
+            <img src="../assets/images/转账1.png" class="cardImg1">
+          </div>
+          <div class="labelCardDiv">
+            <ion-label class="cardLabel">交易明细</ion-label>
+          </div>
         </div>
-        <ion-label class="cardLabel">Label</ion-label>
       </ion-col>
-      <ion-col class="cardCol">
-        <div>
-          <img src="../assets/images/转账1.png" class="img">
+      <ion-col class="cardRow">
+        <div class="cardDiv2" [routerLink]="['/tabs/tab1']">
+          <div class="imgDiv2">
+            <img src="../assets/images/转账1.png" class="cardImg2">
+          </div>
+          <div class="labelCardDiv">
+            <ion-label class="cardLabel">收款人管理</ion-label>
+          </div>
         </div>
-        <ion-label class="cardLabel">Label</ion-label>
+      </ion-col>
+      <ion-col class="cardRow">
+        <div class="cardDiv3" [routerLink]="['/tabs/tab3']">
+          <div class="imgDiv2">
+            <img src="../assets/images/转账1.png" class="cardImg3">
+          </div>
+          <div class="labelCardDiv">
+            <ion-label class="cardLabel">转账撤销</ion-label>
+          </div>
+        </div>
       </ion-col>
     </ion-row>
   </ion-card>
