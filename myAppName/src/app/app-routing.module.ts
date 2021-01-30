@@ -29,6 +29,14 @@ const routes: Routes = [
   {
     path: 'card-transfer',
     loadChildren: () => import('./card-transfer/card-transfer.module').then( m => m.CardTransferPageModule)
+  },
+  {
+    path: 'advance-transfer',
+    loadChildren: () => import('./advance-transfer/advance-transfer.module').then( m => m.AdvanceTransferPageModule)
+  },
+  {
+    path: 'slider',
+    loadChildren: () => import('./slider/slider.module').then( m => m.SliderPageModule)
   }
 ];
 @NgModule({

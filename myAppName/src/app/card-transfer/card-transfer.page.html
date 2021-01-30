@@ -6,7 +6,7 @@
       </ion-back-button>
     </ion-buttons>
     <ion-title>银行卡转账</ion-title>
-    <ion-button fill="clear" slot="end" [routerLink]="['/add-payee']">
+    <ion-button fill="clear" (click)="payeeList()" slot="end">
       <ion-icon name="person-add-outline"></ion-icon>
     </ion-button>
   </ion-toolbar>
@@ -65,6 +65,12 @@
   </ion-button>
 
 </ion-content>
+
+<div class="payeeDiv" *ngIf=showPayee>
+    <ul>
+      <li *ngFor="let item of list">{{item}}</li>
+    </ul>
+</div>
 
 <div class="payDiv" *ngIf=display>
   <div class="card1">

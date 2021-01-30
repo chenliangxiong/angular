@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ion-toolbar {
+    --min-height: 50px;
+    --border-width: 0 !important;
+}
+.optionBar{
+    margin: 0 20px;
+    background-color: #e7e7e7;
+}
+.slide{
+    margin-top: 10px;
+    p{
+        margin-left: 10px;
+    }
+}
+
+
+.transferor{
+    margin-top: 5px;
+    padding: 0;
+}
+.transferOutDiv{
+    div,p{
+        float: left;
+        font-size: 3px;
+    }
+    .transferOutText1{
+        margin-left: 15px;
+    }
+    .transferOutText2{
+        margin-left: 35px;
+    }
+    .transferOutMoney{
+        color: #ffc409;
+    }
+}
+

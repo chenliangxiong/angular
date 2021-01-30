@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="backButton">
+      <ion-back-button defaultHref="/transfer" icon="chevron-back-sharp" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>预约转账</ion-title>
+    <ion-button fill="clear" slot="end" [routerLink]="['/add-payee']">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-row class="row">
+    <ion-segment value="all" class="optionBar">
+      <ion-segment-button value="all">
+        <ion-label>正常</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        <ion-label>已完成</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="ok">
+        <ion-label>撤单</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-col size="12">
+      <div class="slide" >
+        <p>交房租</p>
+      </div>
+    </ion-col>
+
+    <ion-col size="4.5">
+      <ion-item lines="none" class="transferor">
+        <ion-avatar slot="start">
+          <img src="../assets/images/转账1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>刘晋言</h2>
+          <p>尾号7888</p>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="3">
+      <div class="transferOutDiv">
+        <div>
+          <p class="transferOutText1">转出</p>
+          <p class="transferOutMoney">10.00</p>
+          <p>元</p>
+        </div>
+        <img src="../assets/images/箭头.png">
+        <div class="transferOutText2">每周</div>
+      </div>
+    </ion-col>
+
+    <ion-col size="4.5" class="transferor">
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img src="../assets/images/转账1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>刘晋言</h2>
+          <p>尾号7888</p>
+        </ion-label>
+        <ion-item style="display: none;"></ion-item>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

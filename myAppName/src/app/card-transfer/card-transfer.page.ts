@@ -17,7 +17,9 @@ export class CardTransferPage implements OnInit {
 
   public countInput = 0;
   public number:any = ['','','','','',''];
+  public list: any = [];
   public display = false;
+  public showPayee = false;
   public payee:any={
     payeeName:'',
     payeePhone:'',
@@ -32,7 +34,13 @@ export class CardTransferPage implements OnInit {
 
 
   ngOnInit() {
+    for (var i = 0; i < 5; i++) {
+      this.list.push(`收款人${i}`);
+    }
   }
+
+
+  //支付页面
 
   public closePay(){
     this.display = false;
@@ -126,6 +134,12 @@ export class CardTransferPage implements OnInit {
     this.number[this.countInput-1]='';
     this.countInput-=2;
     this.changefocus();
+  }
+
+//   按钮页面
+
+  payeeList(){
+    this.showPayee = !this.showPayee;
   }
 
   async onClick() {

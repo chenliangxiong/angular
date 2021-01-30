@@ -40,10 +40,29 @@
   </ion-button>
   <input  class="input-left" />
 
-  <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
-    Click me
+  <ion-button [routerLink]="['/slider']">
+    swiper
   </ion-button>
-  <ion-button (click)="onClick2()" expand="block" fill="clear" shape="round">
-    Click me
-  </ion-button>
+
+
+
+  <!-- Default Segment -->
+
+  
+
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="friends">
+      <ion-label>Friends</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="enemies">
+      <ion-label>Enemies</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div style="background-color: black;">1</div>
+  <div style="background-color: rgb(255, 0, 0);">2</div>
 </ion-content>
+
+

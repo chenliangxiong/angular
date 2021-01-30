@@ -10,7 +10,8 @@ import { ToastController } from '@ionic/angular';
 export class TestPage implements OnInit {
 
   public input:any='';
-
+  one = true;
+  two = false;
   public flage = 0;
 
   constructor(public toastController: ToastController,
@@ -18,6 +19,11 @@ export class TestPage implements OnInit {
     public elementRef:ElementRef) {}
 
   ngOnInit() {
+  }
+
+  segmentChanged(ev: any) {
+    // this.one = 
+    console.log('Segment changed', ev);
   }
 
   onClick2(){
