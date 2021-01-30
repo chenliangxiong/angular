@@ -7,15 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvanceTransferPage implements OnInit {
 
+  public list:any = [];
+  public normal:any = true;
+  public completed:any = false;
+  public cancel :any = false;
+
   constructor() { }
 
   public display:any = false;
 
   ngOnInit() {
+    for(var i=0 ;i<5;i++){
+      this.list.push(i);
+    }
   }
 
-  onclick(){
-    this.display = !this.display;
+  normalButton(){
+    this.normal = true;
+    this.completed = false;
+    this.cancel = false;
   }
-
+  completedButton(){
+    this.normal = false;
+    this.completed = true;
+    this.cancel = false;
+  }
+  cancelButton(){
+    this.normal = false;
+    this.completed = false;
+    this.cancel = true;
+  }
 }

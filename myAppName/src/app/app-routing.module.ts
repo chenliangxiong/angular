@@ -37,6 +37,18 @@ const routes: Routes = [
   {
     path: 'slider',
     loadChildren: () => import('./slider/slider.module').then( m => m.SliderPageModule)
+  },
+  {
+    path: 'transfer-detail',
+    loadChildren: () => import('./transfer-detail/transfer-detail.module').then( m => m.TransferDetailPageModule)
+  },
+  {
+    path: 'transaction-details',
+    loadChildren: () => import('./transaction-details/transaction-details.module').then( m => m.TransactionDetailsPageModule)
+  },
+  {
+    path: 'transfer-cancellation',
+    loadChildren: () => import('./transfer-cancellation/transfer-cancellation.module').then( m => m.TransferCancellationPageModule)
   }
 ];
 @NgModule({

@@ -8,6 +8,8 @@ import { AdvanceTransferPageRoutingModule } from './advance-transfer-routing.mod
 
 import { AdvanceTransferPage } from './advance-transfer.page';
 
+import { NormalTransferComponent } from './normal-transfer/normal-transfer.component'
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { AdvanceTransferPage } from './advance-transfer.page';
     IonicModule,
     AdvanceTransferPageRoutingModule
   ],
-  declarations: [AdvanceTransferPage]
+  declarations: [AdvanceTransferPage,NormalTransferComponent]
 })
 export class AdvanceTransferPageModule {}

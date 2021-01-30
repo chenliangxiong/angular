@@ -2,7 +2,6 @@
   <div class="headerButton1">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/tab4" icon="arrow-undo-outline" text="">
-        <!-- <ion-icon name=></ion-icon> -->
       </ion-back-button>
     </ion-buttons>
   </div>
@@ -12,11 +11,9 @@
   <div class="headerButton2">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/tab4" icon="headset-outline" text="">
-        <!-- <ion-icon name=></ion-icon> -->
       </ion-back-button>
     </ion-buttons>
   </div>
-  
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -46,7 +43,7 @@
   <ion-card class="card">
     <ion-row class="cardRow">
       <ion-col class="cardCol">
-        <div class="cardDiv1" [routerLink]="['/tabs/tab3']">
+        <div class="cardDiv1" [routerLink]="['/transaction-details']">
           <div class="imgDiv2">
             <img src="../assets/images/转账1.png" class="cardImg1">
           </div>
@@ -66,7 +63,7 @@
         </div>
       </ion-col>
       <ion-col class="cardRow">
-        <div class="cardDiv3" [routerLink]="['/tabs/tab3']">
+        <div class="cardDiv3" [routerLink]="['/transfer-cancellation']">
           <div class="imgDiv2">
             <img src="../assets/images/转账1.png" class="cardImg3">
           </div>

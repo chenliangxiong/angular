@@ -8,34 +8,12 @@ ion-toolbar {
     --border-width: 0 !important;
 }
 .optionBar{
-    margin: 0 20px;
+    // margin: 0 20px;
     background-color: #e7e7e7;
 }
-.slide{
-    margin-top: 10px;
-    p{
-        margin-left: 10px;
-    }
-}
 
-
-.transferor{
-    margin-top: 5px;
+.list{
+    margin: 0;
     padding: 0;
-}
-.transferOutDiv{
-    div,p{
-        float: left;
-        font-size: 3px;
-    }
-    .transferOutText1{
-        margin-left: 15px;
-    }
-    .transferOutText2{
-        margin-left: 35px;
-    }
-    .transferOutMoney{
-        color: #ffc409;
-    }
 }
 
