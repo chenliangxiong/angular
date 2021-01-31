@@ -1,0 +1,203 @@
+<ion-row class="col">
+  <ion-col size="4" (click)="showDiv11()">
+    <div>全部</div>
+    <div *ngIf=showIcon11><img src="../../assets/images/条.png"></div>
+  </ion-col>
+  <ion-col size="4" (click)="showDiv12()">
+    <div>收入</div>
+    <div *ngIf=showIcon12><img src="../../assets/images/条.png"></div>
+  </ion-col>
+  <ion-col size="4" (click)="showDiv13()">
+    <div>支出</div>
+    <div *ngIf=showIcon13><img src="../../assets/images/条.png"></div>
+  </ion-col>
+</ion-row>
+
+<ion-row class="col">
+  <ion-col size="4" (click)="showDiv21()">
+    <div>近一个月</div>
+    <div *ngIf=showIcon21><img src="../../assets/images/条.png"></div>
+  </ion-col>
+  <ion-col size="4" (click)="showDiv22()">
+    <div>近三个月</div>
+    <div *ngIf=showIcon22><img src="../../assets/images/条.png"></div>
+  </ion-col>
+  <ion-col size="4" (click)="showDiv23()">
+    <div>近半年</div>
+    <div *ngIf=showIcon23><img src="../../assets/images/条.png"></div>
+  </ion-col>
+</ion-row>
+
+<!-- 内容 -->
+
+<div *ngIf=showIcon11&&showIcon21>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon11&&showIcon22>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon11&&showIcon23>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon12&&showIcon21>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon12&&showIcon22>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon12&&showIcon23>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon13&&showIcon21>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon13&&showIcon22>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div *ngIf=showIcon13&&showIcon23>
+  <div>本月</div>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="../../assets/images/条.png">
+      </ion-avatar>
+      <ion-label class="label">
+        <div class="div1">
+          <h2>微信零钱提现</h2>
+          <p>2021-01-21</p>
+        </div>
+        <div class="div2">
+          <h1>+10.00</h1>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>

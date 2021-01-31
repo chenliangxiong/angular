@@ -44,25 +44,50 @@
     swiper
   </ion-button>
 
-
-
   <!-- Default Segment -->
 
-  
+  <ion-row class="col">
+    <ion-col size="4" (click)="showDiv11()">
+      <div>全部</div>
+      <div *ngIf=showIcon11><img src="../../assets/images/条.png"></div>
+    </ion-col>
+    <ion-col size="4" (click)="showDiv12()">
+      <div>收入</div>
+      <div *ngIf=showIcon12><img src="../../assets/images/条.png"></div>
+    </ion-col>
+    <ion-col size="4" (click)="showDiv13()">
+      <div>支出</div>
+      <div *ngIf=showIcon13><img src="../../assets/images/条.png"></div>
+    </ion-col>
+  </ion-row>
 
+  <ion-row class="col">
+    <ion-col size="4" (click)="showDiv21()">
+      <div>全部</div>
+      <div *ngIf=showIcon21><img src="../../assets/images/条.png"></div>
+    </ion-col>
+    <ion-col size="4" (click)="showDiv22()">
+      <div>收入</div>
+      <div *ngIf=showIcon22><img src="../../assets/images/条.png"></div>
+    </ion-col>
+    <ion-col size="4" (click)="showDiv23()">
+      <div>支出</div>
+      <div *ngIf=showIcon23><img src="../../assets/images/条.png"></div>
+    </ion-col>
+  </ion-row>
 
-  <ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="friends">
-      <ion-label>Friends</ion-label>
-    </ion-segment-button>
+  <!-- 内容 -->
 
-    <ion-segment-button value="enemies">
-      <ion-label>Enemies</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+<div *ngIf=showIcon11&&showIcon21>1</div>
+<div *ngIf=showIcon11&&showIcon22>2</div>
+<div *ngIf=showIcon11&&showIcon23>3</div>
+<div *ngIf=showIcon12&&showIcon21>4</div>
+<div *ngIf=showIcon12&&showIcon22>5</div>
+<div *ngIf=showIcon12&&showIcon23>6</div>
+<div *ngIf=showIcon13&&showIcon21>7</div>
+<div *ngIf=showIcon13&&showIcon22>8</div>
+<div *ngIf=showIcon13&&showIcon23>9</div>
 
-  <div style="background-color: black;">1</div>
-  <div style="background-color: rgb(255, 0, 0);">2</div>
 </ion-content>
 
 

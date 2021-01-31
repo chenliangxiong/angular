@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'transfer-cancellation',
     loadChildren: () => import('./transfer-cancellation/transfer-cancellation.module').then( m => m.TransferCancellationPageModule)
+  },
+  {
+    path: 'more-detail',
+    loadChildren: () => import('./more-detail/more-detail.module').then( m => m.MoreDetailPageModule)
   }
 ];
 @NgModule({

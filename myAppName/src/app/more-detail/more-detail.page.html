@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="backButton">
+      <ion-back-button defaultHref="/advance-transfer" icon="chevron-back-sharp" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>更多的信息</ion-title>
+    <ion-button fill="clear" slot="end" [routerLink]="['/add-payee']">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label class="label">
+        <div>收款人姓名：&nbsp;&nbsp;</div>
+        <div>刘晋言</div>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <div>收款账号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>6212 **** **** **** 3912</div>
+    </ion-item>
+    <ion-item>
+      <div>币种：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>人民币</div>
+    </ion-item>
+    <ion-item>
+      <div>转账方式：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>预约指定金额转出</div>
+    </ion-item>
+    <ion-item>
+      <div>转账金额：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>100.00元</div>
+    </ion-item>
+    <ion-item-divider>
+      <ion-label></ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <div>预约类型：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>仅一次</div>
+    </ion-item>
+    <ion-item>
+      <div>设置日期：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>2021-01-23</div>
+    </ion-item>
+    <ion-item>
+      <div>首次执行日：&nbsp;&nbsp;</div>
+      <div>2021-01-23</div>
+    </ion-item>
+    <ion-item>
+      <div>下次执行日：&nbsp;&nbsp;</div>
+      <div>2021-01-23</div>
+    </ion-item>
+
+    <ion-item-divider>
+      <ion-label></ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <div>停止条件：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>执行次数</div>
+    </ion-item>
+    <ion-item>
+      <div>总执行数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>1</div>
+    </ion-item>
+    <ion-item>
+      <div>已执行数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>0</div>
+    </ion-item>
+    <ion-item>
+      <div>状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>正常</div>
+    </ion-item>
+  </ion-list>
+
+  <ion-button  expand="block" (click)="onClick()">
+    撤销
+  </ion-button>
+</ion-content>

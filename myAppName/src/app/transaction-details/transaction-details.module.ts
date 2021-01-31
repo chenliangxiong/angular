@@ -8,6 +8,8 @@ import { TransactionDetailsPageRoutingModule } from './transaction-details-routi
 
 import { TransactionDetailsPage } from './transaction-details.page';
 
+import { SegmentComponent } from './segment/segment.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { TransactionDetailsPage } from './transaction-details.page';
     IonicModule,
     TransactionDetailsPageRoutingModule
   ],
-  declarations: [TransactionDetailsPage]
+  declarations: [TransactionDetailsPage,SegmentComponent]
 })
 export class TransactionDetailsPageModule {}
