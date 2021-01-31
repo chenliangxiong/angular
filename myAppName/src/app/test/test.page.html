@@ -44,6 +44,9 @@
     swiper
   </ion-button>
 
+  <ion-button [routerLink]="['/test/hello']">
+    swiper
+  </ion-button>
   <!-- Default Segment -->
 
   <ion-row class="col">
@@ -87,6 +90,35 @@
 <div *ngIf=showIcon13&&showIcon21>7</div>
 <div *ngIf=showIcon13&&showIcon22>8</div>
 <div *ngIf=showIcon13&&showIcon23>9</div>
+
+<!-- 数据请求 -->
+<ion-button (click)="getData()" expand="block" fill="clear" shape="round">
+  请求数据
+</ion-button>
+
+<ion-list>
+  <ion-item *ngFor="let item of list,key">
+    <ion-label>{{item.name}}</ion-label>
+    <ion-label>{{item.text}}</ion-label>
+  </ion-item>
+</ion-list>
+
+<!-- 限制输入 -->
+
+<form name="loginForm" novalidate ng-submit="login()"  ng-controller="LoginController">
+  <div style="width:280px;float:left">
+      <label>用户名：</label>
+      <input type="text" placeholder="请输入用户名" name="uname" ng-model="uname" ng-minlength=
+              3 ng-maxlength=10 required />
+  </div>
+  <div class="error" ng-messages="loginForm.uname.$error" style="color:red;">
+      <div ng-message="required">用户名不能为空</div>
+      <div ng-message="minlength">用户名长度至少为3</div>
+      <div ng-message="maxlength">用户名长度不能超过10</div>
+  </div>
+  <br/><br/>
+  <button type="submit">提交</button>
+</form>
 
 </ion-content>
 

@@ -20,25 +20,37 @@ export class CardTransferPage implements OnInit {
   public list: any = [];
   public display = false;
   public showPayee = false;
+
+  // 发送给后端的数据
+
   public payee:any={
     payeeName:'',
-    payeePhone:'',
     payeeAccount:'',
-    bankName:'',
-    bankNameList:['工商银行','农业银行','建设银行','中国银行'],
-    city:'',
-    cityName:['北京','上海','广西','广东','深圳'],
-    site:'',
-    nickName:''
+    bankId:['工商银行','农业银行','建设银行','中国银行'],
+    amount:'',
+    payAccount:'',
+    desc:'',
+    userId:-1,
   }
 
+  serviceFee:any = 0;
 
   ngOnInit() {
+    
     for (var i = 0; i < 5; i++) {
       this.list.push(`收款人${i}`);
     }
   }
+  
+  public getServiceFee(){
+    // if(this.payee.amount>=100000){
 
+    // }
+    this.serviceFee = this.payee.amount*0.002;
+    if(this.serviceFee<=0.01){
+      this.serviceFee=0.01;
+    }
+  }
 
   //支付页面
 
