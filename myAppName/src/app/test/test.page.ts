@@ -1,6 +1,7 @@
 import { Component, OnInit ,ElementRef} from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-test',
@@ -9,6 +10,8 @@ import { ToastController } from '@ionic/angular';
 })
 export class TestPage implements OnInit {
 
+  public decimalDigit:any = 0;
+  public list:any='';
   public input:any='';
   showIcon11 = true;
   showIcon12 = false;
@@ -22,9 +25,26 @@ export class TestPage implements OnInit {
 
   constructor(public toastController: ToastController,
     public alertController: AlertController,
-    public elementRef:ElementRef) {}
+    public elementRef:ElementRef,
+    public httpClient:HttpClient) {}
 
   ngOnInit() {
+  }
+
+//输入限制
+
+
+
+// 请求测试
+
+  getData(){ 
+    // alert('data')
+    let api="http://192.168.71.195:8080/selectProduct?productType=1"
+    this.httpClient.get(api).subscribe((response:any) => {
+      console.log(response);
+      this.list=response.data;
+      console.log(this.list)
+    });
   }
 
 //segment制作

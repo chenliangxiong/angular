@@ -1,0 +1,7 @@
+{
+  "name": "BankOfChina",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
